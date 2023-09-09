@@ -1,16 +1,18 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 // create context
 export const SearchContext = createContext();
 
 // provider here
 export const SearchContextProvider = ({ children }) => {
+  const [searchActive, setSearchActive] = useState(false);
+
   return (
-    <SearchContextProvider value={"search context"}>
+    <SearchContext.Provider value={{ searchActive, setSearchActive }}>
       {children}
-    </SearchContextProvider>
+    </SearchContext.Provider>
   );
 };
 
