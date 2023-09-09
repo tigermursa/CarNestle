@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#public folder
+public
+public/
+
+# my packages
+package.json/
+package-lock.json/
+.gitignore/
