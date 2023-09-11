@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
-    return (
-        <div>
-            About
-        </div>
-    );
+  return (
+    <section className="section flex items-center bg-pink-200" id="about">
+      About
+    </section>
+  );
 };
 
 export default About;

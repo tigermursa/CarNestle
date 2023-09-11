@@ -107,15 +107,6 @@ const Header = () => {
           </Link>
           <Link
             className="cursor-pointer"
-            to="about"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            About
-          </Link>
-          <Link
-            className="cursor-pointer"
             to="why"
             activeClass="active"
             smooth={desktopMode}
@@ -125,7 +116,7 @@ const Header = () => {
           </Link>
           <Link
             className="cursor-pointer"
-            to="testimonials"
+            to="testimonial"
             activeClass="active"
             smooth={desktopMode}
             spy={true}

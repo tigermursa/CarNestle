@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Cta = () => {
-    return (
-        <div>
-            CtaGory
-        </div>
-    );
+  return (
+    <section
+      className="pt-24 xl:pt-48 flex items-end pb-0 bg-[#b2b7c2]/10"
+      id="contact"
+    >
+      CtaGory
+    </section>
+  );
 };
 
 export default Cta;
