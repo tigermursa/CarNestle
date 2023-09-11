@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Menu } from "@headlessui/react";
 import { useState } from "react";

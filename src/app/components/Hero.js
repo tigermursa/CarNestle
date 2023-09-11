@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
 import { useContext } from "react";
 import { SearchContext } from "../context/search";
 import Search from "./Search";
 import Image from "next/image";
 import { fadeIn } from "/variants";
-import { motion, easeInout } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 
 const Hero = () => {
   const { searchActive } = useContext(SearchContext);
@@ -85,7 +85,7 @@ const Hero = () => {
         <motion.div
           initial={{ y: "-100%" }}
           animate={{ y: 0 }}
-          transition={{ ease: easeInout }}
+          transition={{ ease: easeInOut }}
           className="fixed top-[80px] z-10 w-full max-w-[1920px]"
         >
           <Search />
