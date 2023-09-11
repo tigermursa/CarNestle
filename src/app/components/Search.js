@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { SearchContext } from "../context/search";
 import LocationSelection from "./LocationSelection";
 import DateSelection from "./DateSelection";
+import HoursSelection from "./HoursSelection";
 
 const Search = () => {
   const { searchActive } = useContext(SearchContext);
@@ -17,6 +18,7 @@ const Search = () => {
       <div className="xl:h-full flex items-center px-6 xl:px-0">
         <LocationSelection />
         <DateSelection />
+        <HoursSelection />
       </div>
     </div>
   );
