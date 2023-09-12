@@ -11,10 +11,62 @@ const Cta = () => {
       id="contact"
     >
       <container className="mx-auto">
-        <div>
+        <div className="flex flex-col md:flex-row xl:items-center">
           {/* text here */}
+          <div className="flex-1 xl:ml-24 text-center md:text-left mb-12 md:mb-0">
+            <div className="max-w-[520px] mx-auto order-2 xl:order-none">
+              <h2 className="h2">Download our App now and hit the road with ease</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                sint, incidunt quo dolor iste, sunt explicabo est commodi velit
+                quas pariatur voluptatibus exercitationem provident porro ex
+                officia corporis delectus corrupti.
+              </p>
+              {/* button */}
+              <motion.div
+                variants={fadeIn("up", 0.6)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.6 }}
+                className="flex gap-x-3 justify-center md:justify-start "
+              >
+                <button className="btn-cta">
+                  <Image
+                    src={"/icons/buttons/google-play.svg"}
+                    width={132}
+                    height={36}
+                    alt=""
+                  />
+                </button>
+                <button className="btn-cta">
+                  <Image
+                    src={"/icons/buttons/apple-store.svg"}
+                    width={132}
+                    height={36}
+                    alt=""
+                  />
+                </button>
+              </motion.div>
+            </div>
+          </div>
+          {/* images */}
+          <motion.div
+            variants={fadeIn("up", 0.8)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex-1 flex justify-center order-1 md:order-none"
+          >
+            <Image
+              src={"/images/cta/phone.svg"}
+              width={320}
+              height={640}
+              alt=""
+              // className="mb-4"
+            />
+          </motion.div>
         </div>
-     </container>
+      </container>
     </section>
   );
 };
