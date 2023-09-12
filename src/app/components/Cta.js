@@ -15,13 +15,27 @@ const Cta = () => {
           {/* text here */}
           <div className="flex-1 xl:ml-24 text-center md:text-left mb-12 md:mb-0">
             <div className="max-w-[520px] mx-auto order-2 xl:order-none">
-              <h2 className="h2">Download our App now and hit the road with ease</h2>
-              <p>
+              <motion.h2
+                variants={fadeIn("right", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.6 }}
+                className="h2"
+              >
+                Download our App now and hit the road with ease
+              </motion.h2>
+              <motion.p
+                variants={fadeIn("right", 0.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.6 }}
+                className="mb-10"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
                 sint, incidunt quo dolor iste, sunt explicabo est commodi velit
                 quas pariatur voluptatibus exercitationem provident porro ex
                 officia corporis delectus corrupti.
-              </p>
+              </motion.p>
               {/* button */}
               <motion.div
                 variants={fadeIn("up", 0.6)}
@@ -40,7 +54,7 @@ const Cta = () => {
                 </button>
                 <button className="btn-cta">
                   <Image
-                    src={"/icons/buttons/apple-store.svg"}
+                    src={"/icons/buttons/app-store.svg"}
                     width={132}
                     height={36}
                     alt=""
@@ -62,7 +76,6 @@ const Cta = () => {
               width={320}
               height={640}
               alt=""
-              // className="mb-4"
             />
           </motion.div>
         </div>
