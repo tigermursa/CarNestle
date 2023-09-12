@@ -7,6 +7,7 @@ import { motion, easeInOut } from "framer-motion";
 import { fadeIn } from "/variants";
 import Image from "next/image";
 
+
 // Car Data
 const cars = [
   {

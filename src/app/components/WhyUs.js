@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "/variants";
 import Image from "next/image";
 
-import { MdHandshake, Mdkey, MdTrendingUp } from "react-icons/md";
+import { MdHandshake, IoMdKey, MdTrendingUp } from "react-icons/md";
+
+import { BsFillKeyFill } from "react-icons/bs";
 
 const WhyUs = () => {
   return (
@@ -40,13 +42,18 @@ const WhyUs = () => {
           <Image src={"/images/why/car.svg"} width={1060} height={420} alt="" />
         </motion.div>
         {/* grid items here */}
-        <div>
+        <motion.div
+          variants={fadeIn("up", 0.8)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.4 }}
+          className="flex flex-wrap justify-center xl:grid xl:grid-cols-3 gap-4 xl:gap-y-0 xl:gap-x[30px]"
+        >
           {/* item 1 */}
           <div className="flex flex-col items-center text-center max-w-[160px] xl:max-w-none p-2 xl:p-0 ">
-            <Mdkey className="text-[38px] text-accent mb-4" />
+            <BsFillKeyFill className="text-[38px] text-accent mb-4" />
             <h3 className="h3">Rent simply and quickly</h3>
-            <p className=" hidden xl:flex ">
-              {" "}
+            <p className="hidden xl:flex ">
               We prioritize your need and we go above and beyond to ensure your
               experience with us is nothing short of outstanding
             </p>
@@ -69,7 +76,7 @@ const WhyUs = () => {
               experience with us is nothing short of outstanding
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
