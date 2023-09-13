@@ -7,12 +7,12 @@ import { motion, easeInOut } from "framer-motion";
 import { fadeIn } from "/variants";
 import Image from "next/image";
 
-
 // Car Data
 const cars = [
   {
     type: "Hatchback",
     name: "Ford Focus",
+    location: "BANASREE BLOCK A,DHAKA",
     price: 29,
     stars: 3.5,
     image: "images/carSlider/car01.svg",
@@ -42,6 +42,7 @@ const cars = [
   {
     type: "Sedan",
     name: "Toyota Corolla",
+    location: "BANASREE BLOCK B,DHAKA",
     price: 25,
     stars: 5,
     image: "images/carSlider/car02.svg",
@@ -71,6 +72,7 @@ const cars = [
   {
     type: "SUV",
     name: "Honda CR-V",
+    location: "BANASREE BLOCK C,DHAKA",
     price: 35,
     stars: 4.7,
     image: "images/carSlider/car03.svg",
@@ -100,6 +102,7 @@ const cars = [
   {
     type: "Convertible",
     name: "Mazda MX-5",
+    location: "BANASREE BLOCK D,DHAKA",
     price: 32,
     stars: 4.3,
     image: "images/carSlider/car02.svg",
