@@ -17,7 +17,7 @@ const Brands = () => {
         <div className="grid grid-cols-3 gap-6 place-items-center xl:flex xl:flex-warp xl:gap-x-6 xl:justify-between">
           <div>
             <Image
-              src={"icons/brands/ford.svg"}
+              src={"../icons/brands/ford.svg"}
               width={60}
               height={60}
               alt=""

@@ -32,7 +32,7 @@ const About = () => {
           >
             <Image
               className="rounded-[20px]"
-              src={"/images/about/car01.png"}
+              src={"../images/about/car01.png"}
               width={600}
               height={448}
               alt=""
