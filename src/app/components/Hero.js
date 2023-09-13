@@ -72,7 +72,7 @@ const Hero = () => {
             className="relative w-full h-full max-h-[50vh] md:max-w-[70vw] xl:max-w-[860px] xl:max-h-[542px] xl:absolute xl:-right-[100px] min-[1680px]:right-[120px] xl:top-48"
           >
             <Image
-              src={"/images/hero/car.svg"}
+              src={"/images/hero/lamborghini-png.png"}
               fill
               alt=""
               style={{ objectFit: "contain" }}

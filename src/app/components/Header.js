@@ -56,7 +56,7 @@ const Header = () => {
             spy={true}
             className="cursor-pointer"
           >
-            <Image src={"/icons/logo.svg"} width={194} height={64} alt="logo" />
+            <Image src={"/icons/logo/cannastlelogo.png"} width={194} height={64} alt="logo" />
           </Link>
           {/* navber open menu */}
           <div
