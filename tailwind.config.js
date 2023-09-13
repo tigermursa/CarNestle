@@ -22,7 +22,7 @@ module.exports = {
         primary: "#101828",
         secondary: "#667085",
         accent: {
-          DEFAULT: "#ed1d24",
+          DEFAULT: "rgb(1, 72, 174)",
           hover: "#dd242a",
         },
         body: "#dedede", 

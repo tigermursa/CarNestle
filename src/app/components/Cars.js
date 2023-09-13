@@ -6,7 +6,7 @@ import CarSlider from "./CarSlider";
 
 const Cars = () => {
   return (
-    <section className="h-screen flex items-center " id="cars">
+    <section className="h-screen flex items-center curg " id="cars">
       <div className="container mx-auto">
         <Brands />
         <CarSlider />  

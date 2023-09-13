@@ -21,7 +21,21 @@ const testimonialData = [
   {
     message:
       "They truly exceeded my expectations and made my car rental experience a delight",
-    avatar: "/images/testimonial/avatar.png",
+    avatar: "/images/testimonial/avater2.jpeg",
+    name: "jane Doe",
+    job: "Photographer & Videographer ",
+  },
+  {
+    message:
+      "They truly exceeded my expectations and made my car rental experience a delight",
+    avatar: "/images/testimonial/avater3.jpeg",
+    name: "jane Doe",
+    job: "Photographer & Videographer ",
+  },
+  {
+    message:
+      "They truly exceeded my expectations and made my car rental experience a delight",
+    avatar: "/images/testimonial/avater4.jpeg",
     name: "jane Doe",
     job: "Photographer & Videographer ",
   },
@@ -41,7 +55,7 @@ const TestimonialSlider = () => {
           dynamicBullets: true,
         }}
         modules={[Pagination]}
-        className="h-[450px]  xl:h-[400px]"
+        className="h-[450px]  xl:h-[450px]"
       >
         {testimonialData.map((person, index) => {
           const { message, avatar, name, job } = person;
@@ -57,7 +71,7 @@ const TestimonialSlider = () => {
                   width={64}
                   height={64}
                   alt=""
-                  className="mb-4"
+                  className="mb-4 rounded-full "
                 />
                 <div className=" text-lg font-medium">{name}</div>
                 <div className="text-secondary">{job}</div>

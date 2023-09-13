@@ -112,6 +112,7 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
+      <div></div>
       <Copyright />
     </footer>
   );

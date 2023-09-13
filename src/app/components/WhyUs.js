@@ -39,7 +39,7 @@ const WhyUs = () => {
           viewport={{ once: false, amount: 0.6 }}
           className="hidden md:flex justify-center mb-6 xl:mb-2 "
         >
-          <Image src={"/images/why/car.svg"} width={1060} height={420} alt="" />
+          <Image src={"/images/why/38-toyota-png-image-car-image.png"} width={1060} height={420} alt="" />
         </motion.div>
         {/* grid items here */}
         <motion.div

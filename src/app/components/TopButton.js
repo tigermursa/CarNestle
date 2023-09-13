@@ -22,15 +22,17 @@ function TopButton(props) {
     };
   });
   return (
-    <Link
-      to="home"
-      smooth={true}
-      className={` ${
-        !isActive && "hidden"
-      }fxied bg-accent hover:bg-accent-hover w-12 h-12 right-16 bottom-11 z-10 cursor-pointer flex justify-center items-center text-white border-2 border-white`}
-    >
-      <FaChevronUp />
-    </Link>
+    <div className=" flex justify-end me-3 mb-10 ">
+      <Link
+        to="home"
+        smooth={true}
+        className={` ${
+          !isActive && "hidden"
+        }fixed bg-accent hover:bg-accent-hover rounded-full w-12 h-12 right-16 bottom-11 z-10 cursor-pointer flex justify-center items-center text-white border-2 border-white`}
+      >
+        <FaChevronUp className=" " />
+      </Link>
+    </div>
   );
 }
 
