@@ -24,7 +24,7 @@ const Footer = () => {
             <Link className="cursor-pointer">
               <Image
                 to={"home"}
-                src={"/icons/logo.svg"}
+                src={"/icons/logo/cannastlelogo.png"}
                 width={200}
                 height={200}
                 alt=""
