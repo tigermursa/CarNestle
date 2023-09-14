@@ -72,7 +72,7 @@ const Cta = () => {
             className="flex-1 flex justify-center order-1 md:order-none"
           >
             <Image
-              src={"/images/cta/Picsart_23-09-13_21-52-15-786.jpg"}
+              src={"/images/cta/phone.jpg"}
               width={320}
               height={640}
               alt=""
