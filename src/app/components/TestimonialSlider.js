@@ -14,7 +14,7 @@ const testimonialData = [
   {
     message:
       "They truly exceeded my expectations and made my car rental experience a delight",
-    avatar: "/images/testimonial/avatar.png",
+    avatar: "/images/testimonial/avater4.jpeg",
     name: "jane Doe",
     job: "Photographer & Videographer ",
   },
@@ -35,7 +35,7 @@ const testimonialData = [
   {
     message:
       "They truly exceeded my expectations and made my car rental experience a delight",
-    avatar: "/images/testimonial/avater4.jpeg",
+    avatar: "/images/testimonial/avatar.png",
     name: "jane Doe",
     job: "Photographer & Videographer ",
   },

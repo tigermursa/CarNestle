@@ -6,6 +6,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { motion, easeInOut } from "framer-motion";
 import { fadeIn } from "/variants";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 // Car Data
 const cars = [
@@ -131,6 +132,15 @@ const cars = [
   },
 ];
 
+const handleSeeDetailsClick = () => {
+  Swal.fire({
+    title: "Under Development",
+    text: "This feature will be available soon!",
+    icon: "info",
+    confirmButtonText: "OK",
+  });
+};
+
 const CarSlider = () => {
   return (
     <motion.div
@@ -197,7 +207,12 @@ const CarSlider = () => {
                     );
                   })}
                 </div>
-                <button className="btn btn-accent btn-lg">See Details</button>
+                <button
+                  className="btn btn-accent btn-lg"
+                  onClick={handleSeeDetailsClick}
+                >
+                  See Details
+                </button>
               </div>
             </SwiperSlide>
           );

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useContext } from "react";
 import { SearchContext } from "../context/search";
@@ -23,8 +23,9 @@ const Hero = () => {
               viewport={{ once: false, amount: 0.6 }}
               className="h1"
             >
-              Explore the finest <span className="text-accent">Global</span>{" "}
-              offers
+              Find available <br />{" "}
+              <span className="text-accent"> Car trips </span> easily <br /> in
+              your area
             </motion.h1>
             <motion.p
               variants={fadeIn("down", 0.4)}
@@ -33,8 +34,8 @@ const Hero = () => {
               viewport={{ once: false, amount: 0.6 }}
               className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10"
             >
-              Find your ideal ride for any adventure with our diverse range of
-              affordable and dependable car rentals.
+              Discover the perfect vehicle for every adventure from our wide
+              selection of budget-friendly and reliable car rentals
             </motion.p>
             {/* buttons */}
             <motion.div

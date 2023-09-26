@@ -13,10 +13,16 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "/variants";
 import Image from "next/image";
+import { Link } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.5,
+  });
+
+  const desktopMode = useMediaQuery({
+    query: "(min-width:1300px)",
   });
   return (
     <section className="section flex items-center" id="about" ref={ref}>
@@ -108,15 +114,21 @@ const About = () => {
                 </div>
               </motion.div>
               {/* btn */}
-              <motion.button
-                variants={fadeIn("up", 1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.2 }}
-                className="hidden xl:block bg-accent hover:bg-accent-hover rounded-[10px] w-full h-16 uppercase font-medium text-white tracking[2px] text-[13px] max-w-[184px]"
-              >
-                See All Cars
-              </motion.button>
+
+  
+
+
+              <Link to="cars"    smooth={desktopMode} >
+                <motion.button
+                  variants={fadeIn("up", 1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: false, amount: 0.2 }}
+                  className="hidden xl:block bg-accent hover:bg-accent-hover rounded-[10px] w-full h-16 uppercase font-medium text-white tracking[2px] text-[13px] max-w-[184px]"
+                >
+                  See All Cars
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>

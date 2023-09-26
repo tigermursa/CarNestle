@@ -4,9 +4,18 @@ import { SearchContext } from "../context/search";
 import LocationSelection from "./LocationSelection";
 import DateSelection from "./DateSelection";
 import HoursSelection from "./HoursSelection";
+import Swal from "sweetalert2";
 
 const Search = () => {
   const { searchActive } = useContext(SearchContext);
+  const handleSeeDetailsClick = () => {
+    Swal.fire({
+      title: "Under Development",
+      text: "This feature will be available soon!",
+      icon: "info",
+      confirmButtonText: "OK",
+    });
+  };
   return (
     <div
       className={`${
@@ -22,6 +31,7 @@ const Search = () => {
         {/* button */}
         <div className="xl:h-full flex items-center px-6 xl:px-0">
           <button
+            onClick={handleSeeDetailsClick}
             className={`${
               searchActive
                 ? "btn btn-sm btn-accent xl:w-[164px]"
