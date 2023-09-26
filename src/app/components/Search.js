@@ -38,6 +38,7 @@ const Search = () => {
                 : "btn btn-lg btn-accent xl:w-[184px]"
             }`}
           >
+            {/* ok */}
             Search
           </button>
         </div>
