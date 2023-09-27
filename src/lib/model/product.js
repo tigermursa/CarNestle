@@ -1,8 +1,18 @@
 import mongoose from "mongoose";
 
 const productModel = new mongoose.Schema({
-  title: String,
-  brand: String,
+  type: String,
+  name: String,
+  location: String,
+  price: Number,
+  stars: Number,
+  image: String,
+  info: [
+    {
+      icon: String,
+      text: String,
+    },
+  ],
 });
 
-export const Product = mongoose.models.phones || mongoose.model("phones", productModel);
+export const Product = mongoose.models.carscollectionones|| mongoose.model("carscollectionones", productModel);

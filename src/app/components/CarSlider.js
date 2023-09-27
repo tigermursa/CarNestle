@@ -8,7 +8,7 @@ import { fadeIn } from "/variants";
 import Image from "next/image";
 import Swal from "sweetalert2";
 
-// Car Data
+// Car Data TODO:Will replace with mongoose data
 const cars = [
   {
     type: "Hatchback",
