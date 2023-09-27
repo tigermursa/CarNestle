@@ -18,7 +18,7 @@ const WhyUs = () => {
           viewport={{ once: false, amount: 0.6 }}
           className="h2 text-center"
         >
-          Unmatched excellence and customer satisfaction
+          Exceptional quality and customer delight
         </motion.h2>
         <motion.p
           variants={fadeIn("up", 0.4)}
@@ -27,9 +27,9 @@ const WhyUs = () => {
           viewport={{ once: false, amount: 0.6 }}
           className="max-w-[680px] text-center mx-auto mb-2"
         >
-          Our dedication to providing exceptional services sets us apart from
-          the competition. From the moment you engage with us , we strive to
-          exceed your expectations in every interaction
+          Our commitment to delivering exceptional service distinguishes us from
+          the rest. From your very first interaction with us, we are dedicated
+          to surpassing your expectations at every step
         </motion.p>
         {/* car image */}
         <motion.div
@@ -39,7 +39,12 @@ const WhyUs = () => {
           viewport={{ once: false, amount: 0.6 }}
           className="hidden md:flex justify-center mb-6 xl:mb-2 "
         >
-          <Image src={"/images/why/38-toyota-png-image-car-image.png"} width={1060} height={420} alt="" />
+          <Image
+            src={"/images/why/38-toyota-png-image-car-image.png"}
+            width={1060}
+            height={420}
+            alt=""
+          />
         </motion.div>
         {/* grid items here */}
         <motion.div

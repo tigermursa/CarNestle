@@ -7,7 +7,7 @@ import Image from "next/image";
 const Cta = () => {
   return (
     <section
-      className="pt-24 xl:pt-48 flex items-end pb-0 bg-[#b2b7c2]/10 overflow-hidden "
+      className="pt-24 xl:pt-48 flex items-end pb-0 overflow-hidden "
       id="contact"
     >
       <container className="mx-auto">
@@ -22,7 +22,7 @@ const Cta = () => {
                 viewport={{ once: false, amount: 0.6 }}
                 className="h2"
               >
-                Download our App now and hit the road with ease
+                Get on the road <br /> hassle-free grab our app today!
               </motion.h2>
               <motion.p
                 variants={fadeIn("right", 0.4)}
@@ -31,10 +31,11 @@ const Cta = () => {
                 viewport={{ once: false, amount: 0.6 }}
                 className="mb-10"
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                sint, incidunt quo dolor iste, sunt explicabo est commodi velit
-                quas pariatur voluptatibus exercitationem provident porro ex
-                officia corporis delectus corrupti.
+                CarNastle is your one-stop solution for hassle-free car rentals.
+                Whether you're planning a road trip, need a car for daily
+                commuting, or want to explore a new city, CarNastle has got you
+                covered. With a wide range of cars to choose from and convenient
+                booking options, we make renting a car easy and convenient.
               </motion.p>
               {/* button */}
               <motion.div
