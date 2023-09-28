@@ -32,7 +32,7 @@ const Cta = () => {
                 className="mb-10"
               >
                 CarNastle is your one-stop solution for hassle-free car rentals.
-                Whether you're planning a road trip, need a car for daily
+                Whether your planning a road trip, need a car for daily
                 commuting, or want to explore a new city, CarNastle has got you
                 covered. With a wide range of cars to choose from and convenient
                 booking options, we make renting a car easy and convenient.
