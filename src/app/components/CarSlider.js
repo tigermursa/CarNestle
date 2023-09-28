@@ -6,16 +6,20 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { motion, easeInOut } from "framer-motion";
 import { fadeIn } from "/variants";
 import Image from "next/image";
-import Swal from "sweetalert2";
+
+import CarModal from "./CarModal";
+import { useState } from "react";
 
 // Car Data TODO:Will replace with mongoose data
 const cars = [
   {
+    id: "01",
     type: "Hatchback",
     name: "Ford Focus",
     location: "BANASREE BLOCK A,DHAKA",
     price: 29,
     stars: 3.5,
+    dis: "Are you in the market for a versatile, reliable, and stylish SUV that can handle all of life's adventures? Look no further than the Honda CR-V, a true icon in the world of sport utility vehicles. Located in the bustling neighborhood of Banasree Block C in Dhaka, you can now experience the driving pleasure and practicality of this remarkable vehicle. With a competitive price tag of just $35, the Honda CR-V offers exceptional value for a vehicle that has earned an impressive 4.7-star rating. Let's dive into the details of what makes this SUV stand out from the rest",
     image: "images/carSlider/car01.svg",
     info: [
       {
@@ -41,11 +45,13 @@ const cars = [
     ],
   },
   {
+    id: "02",
     type: "Sedan",
     name: "Toyota Corolla",
     location: "BANASREE BLOCK B,DHAKA",
     price: 25,
     stars: 5,
+    dis: "Are you in the market for a versatile, reliable, and stylish SUV that can handle all of life's adventures? Look no further than the Honda CR-V, a true icon in the world of sport utility vehicles. Located in the bustling neighborhood of Banasree Block C in Dhaka, you can now experience the driving pleasure and practicality of this remarkable vehicle. With a competitive price tag of just $35, the Honda CR-V offers exceptional value for a vehicle that has earned an impressive 4.7-star rating. Let's dive into the details of what makes this SUV stand out from the rest",
     image: "images/carSlider/car02.svg",
     info: [
       {
@@ -71,11 +77,13 @@ const cars = [
     ],
   },
   {
+    id: "03",
     type: "SUV",
     name: "Honda CR-V",
     location: "BANASREE BLOCK C,DHAKA",
     price: 35,
     stars: 4.7,
+    dis: "Are you in the market for a versatile, reliable, and stylish SUV that can handle all of life's adventures? Look no further than the Honda CR-V, a true icon in the world of sport utility vehicles. Located in the bustling neighborhood of Banasree Block C in Dhaka, you can now experience the driving pleasure and practicality of this remarkable vehicle. With a competitive price tag of just $35, the Honda CR-V offers exceptional value for a vehicle that has earned an impressive 4.7-star rating. Let's dive into the details of what makes this SUV stand out from the rest",
     image: "images/carSlider/car03.svg",
     info: [
       {
@@ -101,11 +109,13 @@ const cars = [
     ],
   },
   {
+    id: "04",
     type: "Convertible",
     name: "Mazda MX-5",
     location: "BANASREE BLOCK D,DHAKA",
     price: 32,
     stars: 4.3,
+    dis: "Are you in the market for a versatile, reliable, and stylish SUV that can handle all of life's adventures? Look no further than the Honda CR-V, a true icon in the world of sport utility vehicles. Located in the bustling neighborhood of Banasree Block C in Dhaka, you can now experience the driving pleasure and practicality of this remarkable vehicle. With a competitive price tag of just $35, the Honda CR-V offers exceptional value for a vehicle that has earned an impressive 4.7-star rating. Let's dive into the details of what makes this SUV stand out from the rest",
     image: "images/carSlider/car02.svg",
     info: [
       {
@@ -132,16 +142,21 @@ const cars = [
   },
 ];
 
-const handleSeeDetailsClick = () => {
-  Swal.fire({
-    title: "Under Development",
-    text: "This feature will be available soon!",
-    icon: "info",
-    confirmButtonText: "OK",
-  });
-};
+
 
 const CarSlider = () => {
+  const [selectedCar, setSelectedCar] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (car) => {
+    setSelectedCar(car);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedCar(null);
+    setIsModalOpen(false);
+  };
   return (
     <motion.div
       variants={fadeIn("up", 0.4)}
@@ -209,7 +224,7 @@ const CarSlider = () => {
                 </div>
                 <button
                   className="btn btn-accent btn-lg"
-                  onClick={handleSeeDetailsClick}
+                  onClick={() => openModal(car)}
                 >
                   See Details
                 </button>
@@ -218,6 +233,13 @@ const CarSlider = () => {
           );
         })}
       </Swiper>
+      {selectedCar && (
+        <CarModal
+          car={selectedCar}
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+        />
+      )}
     </motion.div>
   );
 };
