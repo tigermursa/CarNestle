@@ -1,0 +1,18 @@
+/* Add these styles to your CSS */
+.modal-small {
+    max-width: 400px; /* Adjust the width for small modals */
+    margin: 0 auto; /* Center the modal horizontally */
+  }
+  
+  .modal-large {
+    max-width: 800px; /* Adjust the width for large modals */
+    margin: 0 auto; /* Center the modal horizontally */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the column width */
+    gap: 20px;
+    justify-items: center; /* Center the cards within the grid */
+  }
+  

@@ -51,6 +51,7 @@ const Hero = () => {
                   width={132}
                   height={36}
                   alt=""
+                  loading="lazy"
                 ></Image>
               </button>
               <button className="btn-cta">

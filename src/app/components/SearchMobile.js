@@ -9,6 +9,7 @@ const SearchMobile = () => {
       <div className=" container mx-auto">
         <div className="flex flex-col gap-y-4">
           {/* location selection */}
+          {/* TODO: make for phone */}
           <LocationSelection />
           {/* Date selection */}
           <DateSelection />

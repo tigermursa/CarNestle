@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    api: {
-      bodyParser: true,
-    },
-  };
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '4wheelerbd.com',
+      },
+    ],
+  },
+}
   
   module.exports = nextConfig;
