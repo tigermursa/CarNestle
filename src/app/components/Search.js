@@ -8,7 +8,8 @@ import DateSelection from "./DateSelection";
 import HoursSelection from "./HoursSelection";
 import CarList from "./CarList";
 import Swal from "sweetalert2";
-import { ToastContainer } from "react-toastify";
+import { fadeIn } from "/variants";
+import { motion, easeInOut } from "framer-motion";
 const locations = [
   "Banasree Block A,Dhaka",
   "Banasree Block B,Dhaka",
@@ -69,7 +70,7 @@ const Search = () => {
       } hidden xl:block w-full relative shadow-lg pt-5`}
     >
       <div className={`flex h-full ${searchActive && "container mx-auto"} `}>
-         {/* part-location */}
+        {/* part-location */}
         <Menu as="div" className="w-full h-full flex xl:flex-row">
           <div className="relative flex-1">
             {/* button */}
@@ -104,7 +105,7 @@ const Search = () => {
             </Menu.Items>
           </div>
         </Menu>
-       
+
         <DateSelection />
         <HoursSelection />
         {/* button */}
@@ -122,14 +123,20 @@ const Search = () => {
         </div>
       </div>
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-40">
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="fixed inset-0 flex items-center justify-center z-40"
+        >
           <div className="bg-white p-4 rounded-lg shadow-md">
             <button
               onClick={closeModal}
               className=" text-accent hover:text-accent-dark"
             >
               <button
-                className="close-modal bg-blue-600 hover:bg-red-700 text-white p-2 rounded-md absolute right-72  "
+                className="close-modal bg-blue-600 hover:bg-red-700 text-white p-2 rounded-md mb-3  "
                 onClick={closeModal}
               >
                 <FaWindowClose />
@@ -138,9 +145,8 @@ const Search = () => {
             <h2 className="text-2xl font-semibold mb-4">Available Cars(4)</h2>
             <CarList selectedLocation={location} cars={filteredCars} />
           </div>
-        </div>
+        </motion.div>
       )}
-      
     </div>
   );
 };

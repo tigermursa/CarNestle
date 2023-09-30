@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaPhone, FaStar } from "react-icons/fa";
-import Swal from "sweetalert2"; // Import SweetAlert2
+import Swal from "sweetalert2";
 
 const CarList = ({ selectedLocation, cars, openModal }) => {
   // Filter cars based on the selected location
@@ -10,7 +10,9 @@ const CarList = ({ selectedLocation, cars, openModal }) => {
   );
 
   const copyPhoneNumber = (phoneNumber) => {
-    navigator.clipboard.writeText(phoneNumber); // Copy the phone number to clipboard
+
+    
+    navigator.clipboard.writeText(phoneNumber);
 
     // Use SweetAlert2 for notification
     Swal.fire({
@@ -20,7 +22,7 @@ const CarList = ({ selectedLocation, cars, openModal }) => {
       toast: true,
       showConfirmButton: false,
       background: "green", // Background color of the notification
-      color:"white",
+      color: "white",
       customClass: {
         popup: "your-custom-popup-class", // Add custom styling here
       },
@@ -50,7 +52,7 @@ const CarList = ({ selectedLocation, cars, openModal }) => {
                 </div>
                 <h3 className="text-lg uppercase font-bold">{car.name}</h3>
                 <div className="mb-10 text-accent font-semibold uppercase">
-                  {car.price}00  &#2547; /day
+                  {car.price}00 &#2547; /day
                 </div>
               </div>
               {/* stars */}

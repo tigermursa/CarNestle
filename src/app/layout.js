@@ -1,3 +1,4 @@
+import MyLoaderComponent from "./components/MyLoaderComponent";
 import { SearchContextProvider } from "./context/search";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <SearchContextProvider>
       <html lang="en">
+        <MyLoaderComponent/>
         <body className={inter.className}>{children}</body>
       </html>
     </SearchContextProvider>

@@ -84,7 +84,7 @@ const CarSlider = () => {
                   </div>
                   <h3 className="text-lg uppercase font-bold">{car.name}</h3>
                   <div className="mb-10 text-accent font-semibold uppercase">
-                    {car.price}/day
+                    {car.price}00 &#2547; /day
                   </div>
                 </div>
                 {/* stars */}
@@ -116,11 +116,13 @@ const CarSlider = () => {
         ))}
       </Swiper>
       {selectedCar && (
-        <CarModal
-          car={selectedCar}
-          isOpen={isModalOpen}
-          closeModal={closeModal}
-        />
+        <div>
+          <CarModal
+            car={selectedCar}
+            isOpen={isModalOpen}
+            closeModal={closeModal}
+          />
+        </div>
       )}
     </motion.div>
   );
