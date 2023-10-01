@@ -56,7 +56,12 @@ const Header = () => {
             spy={true}
             className="cursor-pointer"
           >
-            <Image src={"/icons/logo/cannastlelogo.png"} width={194} height={64} alt="logo" />
+            <Image
+              src={"/icons/logo/cannastlelogo.png"}
+              width={194}
+              height={64}
+              alt="logo"
+            />
           </Link>
           {/* navber open menu */}
           <div
@@ -132,6 +137,9 @@ const Header = () => {
           >
             Contact
           </Link>
+          <a href="/allcars/mybooked" className="cursor-pointer">
+            My Cars
+          </a>
           <Link
             className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
             to="/"

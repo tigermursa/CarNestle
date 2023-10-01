@@ -5,12 +5,11 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "/variants";
-import CarModal from "./CarModal";
 import useInterval from "../hooks/useInterval";
 import Link from "next/link";
-import allCars from "../allcars/page";
 
-const CarSlider = () => {
+
+const CarSlider2 = () => {
 
   const [cars, setCars] = useState([]);
   const [swiper, setSwiper] = useState(null);
@@ -72,7 +71,7 @@ const CarSlider = () => {
               <div className="flex justify-between">
                 <div>
                   <div className="text-[13px] text-secondary uppercase">
-                    {car.type}
+                    {car.location}
                   </div>
                   <h3 className="text-lg uppercase font-bold">{car.name}</h3>
                   <div className="mb-10 text-accent font-semibold uppercase">
@@ -87,20 +86,11 @@ const CarSlider = () => {
                 </div>
               </div>
               {/* car info */}
-              <div className="flex gap-x-3 xl:gap-x-4 w-max mb-10">
-                {car.info.map((item, index) => (
-                  <div key={index}>
-                    <div className="bg-primary w-12 h-12 rounded-full flex justify-center mb-2">
-                      <Image src={item.icon} width={24} height={24} alt="" />
-                    </div>
-                    <div className="text-[12px]">{item.text}</div>
-                  </div>
-                ))}
-              </div>
+              
 
               <Link href={`/allcars/${car.id}`}>
                 <button
-                  className="btn btn-accent btn-lg"
+                  className="btn btn-accent btn-sm"
                 >
                   See Details
                 </button>
@@ -113,4 +103,4 @@ const CarSlider = () => {
   );
 };
 
-export default CarSlider;
+export default CarSlider2;

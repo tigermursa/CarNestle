@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaPhone, FaStar } from "react-icons/fa";
 import Swal from "sweetalert2";
@@ -10,8 +11,6 @@ const CarList = ({ selectedLocation, cars, openModal }) => {
   );
 
   const copyPhoneNumber = (phoneNumber) => {
-
-    
     navigator.clipboard.writeText(phoneNumber);
 
     // Use SweetAlert2 for notification
@@ -76,12 +75,10 @@ const CarList = ({ selectedLocation, cars, openModal }) => {
               </div>
             ))}
           </div>
-          <button
-            className="btn btn-accent btn-lg text-2xl"
-            onClick={() => copyPhoneNumber(car.phone)}
-          >
-            {car.phone} <FaPhone className="ms-4" />
-          </button>
+
+          <Link href={`/allcars/${car.id}`}>
+            <button className="btn btn-accent btn-lg">See Details</button>
+          </Link>
         </div>
       ))}
     </div>
