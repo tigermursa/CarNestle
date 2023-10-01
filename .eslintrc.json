@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    // Add any additional ESLint rules or overrides here
+    "react/prop-types": "off", // Disable prop-types rule if not using PropTypes
+    "indent": ["error", 2],   // Enforce 2-space indentation
+    // Add more rules as needed
+  }
 }
